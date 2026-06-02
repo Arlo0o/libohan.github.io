@@ -126,6 +126,17 @@ div#subtitle {
 	padding-bottom: 0.1em;
 }
 
+.opportunity-banner {
+    margin-top: 0.8em;
+    padding: 0.7em 0.9em;
+    border-left: 4px solid #d9543f;
+    background: #fff4ef;
+    color: #7b1f12;
+    font-size: 105%;
+    font-weight: bold;
+    line-height: 1.35;
+}
+
 em {
 	font-style: italic;
 }
