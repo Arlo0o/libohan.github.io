@@ -134,6 +134,27 @@ div#subtitle {
     white-space: nowrap;
 }
 
+.profile-links {
+    line-height: 1.7;
+}
+
+.profile-links a {
+    display: inline-block;
+    margin-right: 0.35em;
+}
+
+.research-scope {
+    margin: 0.9em 0 1.2em;
+    text-align: center;
+}
+
+.research-scope img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
 em {
 	font-style: italic;
 }
@@ -326,6 +347,17 @@ span.comment, span.comment > *, span.string, span.string > * {
 
 @media print {
 	#layout-menu { display: none; }
+}
+
+@media (max-width: 700px) {
+    body {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .opportunity-line {
+        white-space: normal;
+    }
 }
 
 #fwtitle {
