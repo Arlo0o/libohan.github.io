@@ -5,11 +5,14 @@
 <head>
     <link rel="shortcut icon" href="myIcon.ico">
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <meta name="keywords" content="Bohan Li">
     <meta name="description" content="Bohan Li&#39; home page">
     <meta name="google-site-verification" content="X2QFrl-bPeg9AdlMt4VKT9v6MJUSTCf-SrY3CvKt4Zs" />
     <link rel="stylesheet" href="jemdoc.css" type="text/css">
+    <link rel="stylesheet" href="publications.css" type="text/css">
+    <script src="publications.js" defer></script>
     <title>Bohan Li&#39; Homepage</title>
     <!-- Google Analytics -->
     <script>
@@ -141,24 +144,29 @@
         </tbody></table>
 
 
-        <h2>
-            <font>Selected Publications (*Equal Contribution)</font>
-        </h2>
+        <section id="publications" aria-labelledby="publications-heading">
+        <h2 id="publications-heading">Selected Publications</h2>
+        <p class="publication-intro">World models, 3D understanding, and generative intelligence across driving, robotics, and science.</p>
+        <div id="publication-controls" hidden>
+          <div class="publication-filters" role="group" aria-label="Filter publications">
+            <button type="button" data-filter="selected" aria-pressed="true">Selected</button>
+            <button type="button" data-filter="all" aria-pressed="false">All works</button>
+            <button type="button" data-filter="driving" aria-pressed="false">Autonomous Driving</button>
+            <button type="button" data-filter="embodied" aria-pressed="false">Embodied Intelligence</button>
+            <button type="button" data-filter="vision" aria-pressed="false">3D Vision &amp; Generation</button>
+            <button type="button" data-filter="science" aria-pressed="false">AI for Science</button>
+          </div>
+          <div class="publication-context">
+            <p id="publication-status" role="status" aria-live="polite"></p>
+            <span>* Equal contribution &nbsp; &dagger; Corresponding author</span>
+          </div>
+        </div>
+        <noscript><p>All works are shown below. * Equal contribution; &dagger; Corresponding author.</p></noscript>
         <table id="tbPublications" width="100%"   >
             <tbody>
                 <tr>
                   <td colspan="2" height="2"></td>  
                 </tr>
-
-                <tr>
-                  <td width="206">
-                      <img src="images\corl2026-workshop.png" width="200px" style="box-shadow: 4px 4px 8px #888" alt="CoRL 2026 workshop website screenshot">
-                  </td>
-                  <td><b><a href="https://arlo0o.github.io/Grounded-Driving-World-Models_Workshop/">Grounded 4D Multimodal World Models for Autonomous Driving Decision Making</a></b> <br>
-                      <b>Bohan Li (Program Chairs) </b> <font color="gray">and the organizing team.</font><br>
-                      <p><p>Conference on Robot Learning <b>(CoRL 2026 Workshop)</b><br> [ <a href="https://arlo0o.github.io/Grounded-Driving-World-Models_Workshop/">workshop website</a> ]
-                  </td>
-              </tr>
 
                 <tr>
                 </tr>
@@ -563,6 +571,23 @@
 
             </tbody>
         </table>
+        <div class="publication-expand" id="publication-expand" hidden>
+          <button type="button" id="publication-toggle" aria-controls="tbPublications" aria-expanded="false">Show all works</button>
+          <p id="publication-expand-note"></p>
+        </div>
+        </section>
+        <section class="academic-activities" aria-labelledby="activities-heading">
+          <h2 id="activities-heading">Academic Activities</h2>
+          <div class="activity-item">
+            <img src="images/corl2026-workshop.png" alt="CoRL 2026 workshop website" width="200">
+            <div>
+              <a class="activity-title" href="https://arlo0o.github.io/Grounded-Driving-World-Models_Workshop/">Grounded 4D Multimodal World Models for Autonomous Driving Decision Making</a>
+              <p><strong>Bohan Li (Program Chair)</strong> and the organizing team.</p>
+              <p>Conference on Robot Learning <strong>(CoRL 2026 Workshop)</strong></p>
+              <a href="https://arlo0o.github.io/Grounded-Driving-World-Models_Workshop/">Workshop Website</a>
+            </div>
+          </div>
+        </section>
         <h2>
             <font>Experiences </font>
         </h2>

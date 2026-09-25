@@ -1,0 +1,68 @@
+#publications [hidden] { display: none !important; }
+
+.publication-intro { color: #687180; font-size: 0.94em; line-height: 1.6; }
+.publication-filters { display: flex; flex-wrap: wrap; gap: 2px 20px; border-bottom: 1px solid #e3e7ec; }
+.publication-filters button {
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: #687180;
+  padding: 11px 0;
+  font: inherit;
+  font-size: 0.88em;
+  cursor: pointer;
+}
+.publication-filters button:hover { color: #224b8d; }
+.publication-filters button[aria-pressed="true"] { color: #224b8d; border-bottom-color: #224b8d; }
+#publications button:focus-visible { outline: 2px solid #527bbd; outline-offset: 4px; }
+.publication-context { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin: 16px 0 4px; color: #7a818b; font-size: 0.78em; }
+.publication-context p { margin: 0; }
+#publication-status { color: #596473; }
+#tbPublications.publications-enhanced, #tbPublications.publications-enhanced > tbody { display: block; width: 100%; }
+#tbPublications.publications-enhanced tr:not(.publication-item) { display: none; }
+#tbPublications .publication-item { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 26px; padding: 25px 0; border-bottom: 1px solid #edf0f3; }
+#tbPublications .publication-item > td { display: block; padding: 0; width: auto; min-width: 0; line-height: 1.5; font-size: 0.92em; }
+#tbPublications .publication-thumbnail {
+  display: block;
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+  border: 1px solid #e7ebf0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 2px 7px rgba(30, 50, 75, 0.06) !important;
+}
+#tbPublications .publication-title { display: inline-block; font-size: 1.08em; line-height: 1.4; margin-bottom: 5px; }
+#tbPublications .publication-item p { line-height: 1.5; margin: 6px 0 0; }
+#tbPublications .publication-item p:empty { display: none; }
+#tbPublications .publication-item font[color="gray"] { color: #747b84; }
+#tbPublications .publication-item img:not(.publication-thumbnail) { max-width: 100%; vertical-align: middle; }
+.publication-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.publication-tag { padding: 3px 8px; border-radius: 3px; font: 11px/1.4 Arial, sans-serif; letter-spacing: 0.01em; background: #f1f3f5; color: #65707b; }
+.topic-driving { background: #eef3fa; color: #48678e; }
+.topic-embodied { background: #edf5f2; color: #487363; }
+.topic-vision { background: #f2eff8; color: #74618e; }
+.topic-science { background: #faf2e9; color: #956b3c; }
+.publication-expand { text-align: center; padding: 24px 0 12px; }
+.publication-expand button { border: 1px solid #c8d4e3; border-radius: 5px; padding: 11px 26px; background: #f8fafc; color: #224b8d; font: inherit; font-size: 0.92em; cursor: pointer; }
+.publication-expand button:hover { background: #edf3fa; border-color: #527bbd; }
+.publication-expand p { font-size: 0.8em; color: #7a818b; margin: 9px 0 0; }
+.activity-item { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 26px; margin: 22px 0 30px; font-size: 0.92em; line-height: 1.5; }
+.activity-item > img { width: 100%; height: 130px; object-fit: contain; border: 1px solid #e7ebf0; border-radius: 5px; box-sizing: border-box; }
+.activity-title { display: inline-block; font-weight: bold; margin-bottom: 6px; }
+.activity-item p { margin-bottom: 6px; }
+
+@media (max-width: 600px) {
+  #tbPublications .publication-item, .activity-item { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  #tbPublications .publication-thumbnail, .activity-item > img { width: 200px; max-width: 100%; height: 120px; }
+  .publication-filters { gap: 0 16px; }
+  .publication-filters button { font-size: 0.82em; min-height: 44px; }
+  .publication-context { line-height: 1.6; }
+}
+
+@media print {
+  #publication-controls, #publication-expand { display: none !important; }
+  #tbPublications .publication-item[hidden] { display: grid !important; }
+  #tbPublications .publication-item { break-inside: avoid; }
+}
