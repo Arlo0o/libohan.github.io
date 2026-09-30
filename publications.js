@@ -21,7 +21,7 @@
     'orv.png': { topics: ['embodied'], selected: true },
     'pam.png': { topics: ['vision', 'embodied'] },
     'LightofNormals.png': { topics: ['vision'] },
-    'LightX.png': { topics: ['vision'], selected: true },
+    'LightX.png': { topics: ['vision'] },
     'stablemap.png': { topics: ['driving'] },
     'dkt.png': { topics: ['embodied', 'vision'] },
     'challenger.png': { topics: ['driving'] },
@@ -121,7 +121,7 @@
       button.setAttribute('aria-pressed', String(button.dataset.filter === filter));
     }
     status.textContent = filter === 'selected'
-      ? `${count} selected works across four research directions`
+      ? `${count} selected works`
       : filter === 'all' ? `All ${count} works` : `${topics[filter]} / ${count} works`;
     toggle.textContent = filter === 'all' ? `Back to selected works (${selectedCount})` : `Show all works (${entries.length})`;
     toggle.setAttribute('aria-expanded', String(filter === 'all'));
