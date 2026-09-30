@@ -140,6 +140,15 @@
     }
   });
   table.classList.add('publications-enhanced');
+  // Fill the frame only when stretching changes the aspect ratio by at most 25%.
+  for (const img of document.querySelectorAll('.publication-thumbnail, .activity-item > img')) {
+    const fitThumbnail = () => {
+      const relativeRatio = (img.naturalWidth / img.naturalHeight) / (8 / 5);
+      img.classList.toggle('thumbnail-fill', relativeRatio >= 0.8 && relativeRatio <= 1.25);
+    };
+    img.addEventListener('load', fitThumbnail);
+    if (img.complete && img.naturalWidth) fitThumbnail();
+  }
   render('selected');
   document.getElementById('publication-controls').hidden = false;
   document.getElementById('publication-expand').hidden = false;
